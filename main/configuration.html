@@ -236,15 +236,15 @@ to known Arduino definitions for microprocessor types. The structure looks like 
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">* Configure the appropriate board/layout section</span>
 <span class="cm">* below as required</span>
-<span class="cm">*/</span><span class="w"></span>
+<span class="cm">*/</span>
 <span class="cp">#ifdef AR488_CUSTOM</span>
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 <span class="cp">#elif __AVR_Atmega328P__</span>
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 <span class="cp">#elif __AVR_Atmega32U4__</span>
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 <span class="cp">#elif __AVR_Atmega2560__</span>
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 <span class="cp">#endif </span><span class="c1">// Board/layout selection</span>
 </pre></div>
 </div>
@@ -255,10 +255,10 @@ pre-defined board layouts as well as serial port definitions corresponding to th
 features of specific boards. For example here are the definitions for boards based on
 the 328p microcontroller which are found within the <code class="docutils literal notranslate"><span class="pre">__AVR_Atmega328P__</span></code> section of
 the <code class="docutils literal notranslate"><span class="pre">#ifdef</span></code> statement:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Board/layout selection */</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Board/layout selection */</span>
 <span class="cp">#define AR488_UNO</span>
 <span class="c1">//#define AR488_NANO</span>
-<span class="cm">/*** Serial ports ***/</span><span class="w"></span>
+<span class="cm">/*** Serial ports ***/</span>
 <span class="c1">//Select HardwareSerial or SoftwareSerial (default = HardwareSerial) ***/</span>
 <span class="c1">// The UNO/NANO default hardware port is 'Serial'</span>
 <span class="c1">// (Comment out #define AR_HW_SERIAL if using SoftwareSerial)</span>
@@ -464,9 +464,9 @@ reset prevents the Arduino from being programmed via USB, so is not advised unle
 intention is to program the Arduino using a suitable AVR programmer.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">AR488_Config.h</span></code> file, sketch, below the help information there is a section
 that starts:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************/</span><span class="w"></span>
-<span class="cm">/***** AR488 MACROS SECTION *****/</span><span class="w"></span>
-<span class="cm">/***** vvvvvvvvvvvvvvvvvvvv *****/</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************/</span>
+<span class="cm">/***** AR488 MACROS SECTION *****/</span>
+<span class="cm">/***** vvvvvvvvvvvvvvvvvvvv *****/</span>
 <span class="cp">#ifdef USE_MACROS</span>
 </pre></div>
 </div>
@@ -478,7 +478,7 @@ be defined as follows:</p>
 <span class="cp">*RST\n\</span>
 <span class="cp">:func 'volt:ac'</span>
 <span class="s">"</span>
-<span class="cm">/* End of MACRO_0 (Startup macro)*/</span><span class="w"></span>
+<span class="cm">/* End of MACRO_0 (Startup macro)*/</span>
 </pre></div>
 </div>
 <p>All macro commands comprising the macro must be placed after the <code class="docutils literal notranslate"><span class="pre">\</span></code> on the first line
@@ -504,7 +504,7 @@ return) delimiter character.</p>
 a similar format, e.g:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MACRO_2 "\</span>
 <span class="cp">"</span>
-<span class="cm">/*&lt;-End of macro 2*/</span><span class="w"></span>
+<span class="cm">/*&lt;-End of macro 2*/</span>
 </pre></div>
 </div>
 <p>Once again, the required command sequence must be placed between the two quotes and
@@ -529,9 +529,9 @@ perhaps easier to see what is going on in the latter example. Either will functi
 the same and take up the same amount of memory.</p>
 <p>The macro definition area provided in the sketch ends with:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-<span class="cm">/***** ^^^^^^^^^^^^^^^^^^^^ *****/</span><span class="w"></span>
-<span class="cm">/***** AR488 MACROS SECTION *****/</span><span class="w"></span>
-<span class="cm">/********************************/</span><span class="w"></span>
+<span class="cm">/***** ^^^^^^^^^^^^^^^^^^^^ *****/</span>
+<span class="cm">/***** AR488 MACROS SECTION *****/</span>
+<span class="cm">/********************************/</span>
 </pre></div>
 </div>
 <p>Anything outside of this section does not relate to macros.</p>
@@ -665,24 +665,24 @@ normal operations.</p>
 layout for the AR488. This can be helpful for non-Arduino boards and where an adjustment
 to the layout is required in order to accommodate additional hardware. By default, the
 definition implements the Uno layout:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define DIO1  A0  </span><span class="cm">/* GPIB 1  */</span><span class="cp"></span>
-<span class="cp">#define DIO2  A1  </span><span class="cm">/* GPIB 2  */</span><span class="cp"></span>
-<span class="cp">#define DIO3  A2  </span><span class="cm">/* GPIB 3  */</span><span class="cp"></span>
-<span class="cp">#define DIO4  A3  </span><span class="cm">/* GPIB 4  */</span><span class="cp"></span>
-<span class="cp">#define DIO5  A4  </span><span class="cm">/* GPIB 13 */</span><span class="cp"></span>
-<span class="cp">#define DIO6  A5  </span><span class="cm">/* GPIB 14 */</span><span class="cp"></span>
-<span class="cp">#define DIO7  4   </span><span class="cm">/* GPIB 15 */</span><span class="cp"></span>
-<span class="cp">#define DIO8  5   </span><span class="cm">/* GPIB 16 */</span><span class="cp"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define DIO1  A0  </span><span class="cm">/* GPIB 1  */</span>
+<span class="cp">#define DIO2  A1  </span><span class="cm">/* GPIB 2  */</span>
+<span class="cp">#define DIO3  A2  </span><span class="cm">/* GPIB 3  */</span>
+<span class="cp">#define DIO4  A3  </span><span class="cm">/* GPIB 4  */</span>
+<span class="cp">#define DIO5  A4  </span><span class="cm">/* GPIB 13 */</span>
+<span class="cp">#define DIO6  A5  </span><span class="cm">/* GPIB 14 */</span>
+<span class="cp">#define DIO7  4   </span><span class="cm">/* GPIB 15 */</span>
+<span class="cp">#define DIO8  5   </span><span class="cm">/* GPIB 16 */</span>
 
-<span class="cp">#define IFC   8   </span><span class="cm">/* GPIB 9  */</span><span class="cp"></span>
-<span class="cp">#define NDAC  9   </span><span class="cm">/* GPIB 8  */</span><span class="cp"></span>
-<span class="cp">#define NRFD  10  </span><span class="cm">/* GPIB 7  */</span><span class="cp"></span>
-<span class="cp">#define DAV   11  </span><span class="cm">/* GPIB 6  */</span><span class="cp"></span>
-<span class="cp">#define EOI   12  </span><span class="cm">/* GPIB 5  */</span><span class="cp"></span>
+<span class="cp">#define IFC   8   </span><span class="cm">/* GPIB 9  */</span>
+<span class="cp">#define NDAC  9   </span><span class="cm">/* GPIB 8  */</span>
+<span class="cp">#define NRFD  10  </span><span class="cm">/* GPIB 7  */</span>
+<span class="cp">#define DAV   11  </span><span class="cm">/* GPIB 6  */</span>
+<span class="cp">#define EOI   12  </span><span class="cm">/* GPIB 5  */</span>
 
-<span class="cp">#define SRQ   2   </span><span class="cm">/* GPIB 10 */</span><span class="cp"></span>
-<span class="cp">#define REN   3   </span><span class="cm">/* GPIB 17 */</span><span class="cp"></span>
-<span class="cp">#define ATN   7   </span><span class="cm">/* GPIB 11 */</span><span class="cp"></span>
+<span class="cp">#define SRQ   2   </span><span class="cm">/* GPIB 10 */</span>
+<span class="cp">#define REN   3   </span><span class="cm">/* GPIB 17 */</span>
+<span class="cp">#define ATN   7   </span><span class="cm">/* GPIB 11 */</span>
 </pre></div>
 </div>
 <p>To make use of a custom layout, <code class="docutils literal notranslate"><span class="pre">AR488_CUSTOM</span></code> must be selected from the list of

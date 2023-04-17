@@ -360,15 +360,15 @@ therefore inadvisable to disable BOD on an Arduino being used as a GPIB interfac
 </table></div>
 <p>To check the extended fuse setting, the following AVRDUDE command line can be used:</p>
 <p>UNO/NANO:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude -P /dev/ttyACM0 -b <span class="m">19200</span> -c usbasp -p m328p -v
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude<span class="w"> </span>-P<span class="w"> </span>/dev/ttyACM0<span class="w"> </span>-b<span class="w"> </span><span class="m">19200</span><span class="w"> </span>-c<span class="w"> </span>usbasp<span class="w"> </span>-p<span class="w"> </span>m328p<span class="w"> </span>-v
 </pre></div>
 </div>
 <p>Mega 2560:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude -P /dev/ttyACM0 -b <span class="m">115200</span> -c usbasp -p m2560 -v
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude<span class="w"> </span>-P<span class="w"> </span>/dev/ttyACM0<span class="w"> </span>-b<span class="w"> </span><span class="m">115200</span><span class="w"> </span>-c<span class="w"> </span>usbasp<span class="w"> </span>-p<span class="w"> </span>m2560<span class="w"> </span>-v
 </pre></div>
 </div>
 <p>MEGA 32U4:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude -P /dev/ttyACM0 -b <span class="m">115200</span> -c usbasp -p m32u4 -v
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>avrdude<span class="w"> </span>-P<span class="w"> </span>/dev/ttyACM0<span class="w"> </span>-b<span class="w"> </span><span class="m">115200</span><span class="w"> </span>-c<span class="w"> </span>usbasp<span class="w"> </span>-p<span class="w"> </span>m32u4<span class="w"> </span>-v
 </pre></div>
 </div>
 <p>The ATMega328p part can be specified as <code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">m328p</span></code> or <code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">atmega328p</span></code>. The Mega 2560
